@@ -12,7 +12,7 @@ The backend is a simple python application which has a hello REST endpoint, whic
 The frontend is a simple angular application with nearly none functionality, except for calling the backend.
 
 When the application is running in docker, nginx is used for serving the application and reverse proxy the backend.
-
+For the proxy part a default nginx configuration is copied while building the docker image.
 ## Docker
 
 The backend as well as the frontend has both a Dockerfile, to be run simple as docker containers.
