@@ -1,0 +1,16 @@
+version: '3'
+services:
+  backend:
+    build: dummy-backend
+    image: dummy-backend
+    ports:
+      - "5000:5000"
+  frontend:
+    build: dummy-frontend
+    image: dummy-frontend
+    ports:
+      - "8081:80"
+    links:
+      - backend
+    depends_on:
+      - backend
