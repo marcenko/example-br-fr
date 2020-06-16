@@ -23,4 +23,4 @@ Build application: `docker-compose build`
 
 Run application: `docker-compose up -d`
 
-Run application: `docker-compose down`
+Stop application: `docker-compose down`
