@@ -21,8 +21,24 @@ export class AppComponent {
       }
     );
   }
+
+  doLogin() {
+    this.http.get('/api/login').subscribe(
+      (data: User) =>  {
+        console.log(data);
+      },
+      error => {
+        console.log('Error on login');
+      }
+    );
+  }
 }
 
 export interface Greeting {
   text: string;
+}
+
+export interface User {
+  name: string;
+  email: string;
 }
